@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GENIE ∞Ω SUPREME</title>
+  <style>
+    body { font-family: Arial; background-color: #111; color: white; margin: 0; padding: 0; }
+    header { background-color: #222; padding: 20px; text-align: center; font-size: 1.5em; }
+    section { padding: 20px; }
+    .characters { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+    .characters img { width: 200px; height: auto; border-radius: 16px; box-shadow: 0 0 10px #0ff; }
+    button { padding: 10px 20px; background: #0ff; border: none; border-radius: 8px; cursor: pointer; margin: 10px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>GENIE ∞Ω SUPREME – واجهة التحكم</header>
+  <section>
+    <h2>الشخصيات:</h2>
+    <div class="characters">
+      <div><img src="maya.png" alt="مايا"/><p style="text-align:center">مايا</p></div>
+      <div><img src="mariam.png" alt="مريم"/><p style="text-align:center">مريم</p></div>
+    </div>
+    <h3>اختر المود:</h3>
+    <div>
+      <button onclick="setMode('جلسة')">جلسة نفسية</button>
+      <button onclick="setMode('رقص')">رقص شرقي</button>
+      <button onclick="setMode('كوانتمي')">وضع كوانتمي</button>
+    </div>
+    <div id="mode-display" style="margin-top:20px; font-size:1.2em; color:#0ff;"></div>
+  </section>
+  <script>
+    function setMode(mode) {
+      document.getElementById("mode-display").innerText = "الوضع الحالي: " + mode;
+    }
+  </script>
+</body>
+</html>
